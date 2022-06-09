@@ -3,8 +3,8 @@ const {
   DB_PASSWORD = '',
   DB_NAME = 'bcr',
   DB_HOST = '127.0.0.1',
-  DB_PORT = '5432',
-} = process.env;
+  DB_PORT = '5432'
+} = process.env
 module.exports = {
   development: {
     username: DB_USER,
@@ -16,9 +16,9 @@ module.exports = {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false,
-      },
-    },
+        rejectUnauthorized: false
+      }
+    }
   },
   test: {
     username: DB_USER,
@@ -30,9 +30,9 @@ module.exports = {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false,
-      },
-    },
+        rejectUnauthorized: false
+      }
+    }
   },
   production: {
     username: DB_USER,
@@ -44,9 +44,9 @@ module.exports = {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false,
-      },
-    },
-  },
+        rejectUnauthorized: false
+      }
+    }
+  }
 
-};
+}

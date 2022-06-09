@@ -1,6 +1,5 @@
-'use strict';
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up (queryInterface, Sequelize) {
     await queryInterface.createTable('UserCars', {
       id: {
         allowNull: false,
@@ -12,19 +11,19 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Users',
+            tableName: 'Users'
           },
-          key: 'id',
-        },
+          key: 'id'
+        }
       },
       carId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Cars',
+            tableName: 'Cars'
           },
-          key: 'id',
-        },
+          key: 'id'
+        }
       },
       rentStartedAt: {
         type: Sequelize.DATE
@@ -40,9 +39,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    })
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('UserCars');
+  async down (queryInterface, Sequelize) {
+    await queryInterface.dropTable('UserCars')
   }
-};
+}
